@@ -1,6 +1,6 @@
 # RaspberryPi 4 Jupyterlab (Docker)
 
-Minimal Dockerfile to run JupyterLab on an RaspberryPi 4 (64 bit). Well suited to include them in IoT services like Balena.
+Minimal Dockerfile to run JupyterLab on an RaspberryPi 4 (arm64). Preinstalled IPython and Ijavascript core  Well suited to include them in IoT services like Balena.
 
 ### Docker-Compose example, as it can also be found in the repository:
 ```yaml
