@@ -4,9 +4,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y
 
 # install dependencies/ packages
-RUN apt-get install nano
+RUN apt-get install -y nano
 RUN apt-get install -y tzdata
 RUN apt-get install -y curl
+RUN apt-get install -y nmap
 
 # install nodejs
 RUN curl -sSL https://deb.nodesource.com/setup_14.x | bash -
@@ -35,6 +36,8 @@ RUN pip3 install pyTelegramBotAPI
 RUN pip3 install plotly
 RUN pip3 install ipywidgets>=7.6
 RUN pip3 install jupyter-dash jupyterlab-dash
+RUN pip3 install watchdog
+RUN pip3 install python-nmap
 
 # install ijavascript
 RUN npm -g config set user root
