@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y
 
 # install dependencies/ packages
-RUN apt-get install -y nano
+RUN apt-get install vim ranger -y
 RUN apt-get install -y tzdata
 RUN apt-get install -y curl
 RUN apt-get install -y nmap
@@ -13,8 +13,9 @@ RUN apt-get install -y nmap
 RUN curl -sSL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 
-RUN mkdir /home/workdir
-WORKDIR /home/workdir
+# #:latest
+# RUN mkdir /home/workdir
+WORKDIR /home
 
 # install dependencies/ packages
 RUN apt-get install -y python3 python3-pip libatlas-base-dev wget gfortran libhdf5-dev libc-ares-dev libeigen3-dev libopenblas-dev libblas-dev liblapack-dev 
